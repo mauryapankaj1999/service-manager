@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Aromatherapy Massage",
+    "description": "Relaxing massage with essential oils.",
+    "price": "₹2500",
+    "image": "/images/placeholder.svg",
+    "category": "Massage"
+  },
+  {
+    "id": 2,
+    "title": "Facial Treatment",
+    "description": "Deep cleansing and skin hydration.",
+    "price": "₹1800",
+    "image": "/images/placeholder.svg",
+    "category": "Skin Care"
+  },
+  {
+    "id": 3,
+    "title": "Yoga Session",
+    "description": "One-hour guided yoga session.",
+    "price": "₹1500",
+    "image": "/images/placeholder.svg",
+    "category": "Wellness"
+  },
+  {
+    "id": 4,
+    "title": "Deep Tissue Massage",
+    "description": "Intensive massage for muscle tension relief.",
+    "price": "₹3000",
+    "image": "/images/placeholder.svg",
+    "category": "Massage"
+  },
+  {
+    "id": 5,
+    "title": "Anti-Aging Treatment",
+    "description": "Advanced skincare for youthful appearance.",
+    "price": "₹3500",
+    "image": "/images/placeholder.svg",
+    "category": "Skin Care"
+  },
+  {
+    "id": 6,
+    "title": "Meditation Session",
+    "description": "Guided meditation for mental wellness.",
+    "price": "₹1200",
+    "image": "/images/placeholder.svg",
+    "category": "Wellness"
+  }
+]

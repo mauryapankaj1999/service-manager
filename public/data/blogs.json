@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "5 Benefits of Aromatherapy",
+    "excerpt": "Discover how aromatherapy can reduce stress and improve sleep quality. Learn about the therapeutic properties of essential oils and their impact on mental health.",
+    "content": "Aromatherapy has been used for centuries as a natural way to promote physical and emotional well-being. Essential oils extracted from plants contain powerful compounds that can positively affect our mood, energy levels, and overall health. In this comprehensive guide, we explore the top 5 benefits of aromatherapy and how you can incorporate it into your daily routine for maximum wellness benefits.",
+    "image": "/images/placeholder.svg",
+    "tags": ["wellness", "aromatherapy", "health"],
+    "category": "Wellness",
+    "date": "2024-01-15"
+  },
+  {
+    "id": 2,
+    "title": "Why Yoga Improves Productivity",
+    "excerpt": "Yoga is more than exercise – it boosts focus and energy levels while reducing workplace stress. Discover how regular yoga practice can enhance your professional performance.",
+    "content": "In today's fast-paced work environment, maintaining high productivity while managing stress is crucial. Yoga offers a unique combination of physical exercise, mindfulness, and breathing techniques that can significantly improve your work performance. This article explores the scientific evidence behind yoga's productivity benefits and provides practical tips for incorporating yoga into your busy schedule.",
+    "image": "/images/placeholder.svg",
+    "tags": ["productivity", "yoga", "workplace"],
+    "category": "Wellness",
+    "date": "2024-01-10"
+  },
+  {
+    "id": 3,
+    "title": "Top 10 Spa Treatments in 2025",
+    "excerpt": "Check out the most popular spa treatments people love this year. From traditional therapies to modern innovations, discover what's trending in wellness.",
+    "content": "The spa industry continues to evolve with new treatments and technologies that promise enhanced relaxation and wellness benefits. In 2025, we're seeing a perfect blend of traditional healing methods and cutting-edge innovations. This comprehensive guide covers the top 10 spa treatments that are gaining popularity, their benefits, and what to expect during your spa experience.",
+    "image": "/images/placeholder.svg",
+    "tags": ["spa", "treatments", "wellness", "trends"],
+    "category": "Lifestyle",
+    "date": "2024-01-05"
+  },
+  {
+    "id": 4,
+    "title": "The Science of Massage Therapy",
+    "excerpt": "Explore the scientific benefits of massage therapy and how it affects your body at a cellular level. Learn why massage is more than just relaxation.",
+    "content": "Massage therapy is backed by extensive scientific research showing its benefits for both physical and mental health. From reducing cortisol levels to improving circulation and immune function, massage therapy works at a cellular level to promote healing and wellness. This in-depth article examines the scientific mechanisms behind massage therapy and its proven health benefits.",
+    "image": "/images/placeholder.svg",
+    "tags": ["massage", "science", "health", "therapy"],
+    "category": "Health",
+    "date": "2024-01-01"
+  }
+]

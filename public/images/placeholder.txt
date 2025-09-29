@@ -1,0 +1,22 @@
+This directory contains placeholder images for the Service Manager application.
+
+For production use, replace these placeholder images with actual high-quality images:
+
+- aroma.jpg - Aromatherapy massage image
+- facial.jpg - Facial treatment image  
+- yoga.jpg - Yoga session image
+- deep-tissue.jpg - Deep tissue massage image
+- anti-aging.jpg - Anti-aging treatment image
+- meditation.jpg - Meditation session image
+- blog1.jpg - Blog post 1 featured image
+- blog2.jpg - Blog post 2 featured image
+- blog3.jpg - Blog post 3 featured image
+- blog4.jpg - Blog post 4 featured image
+
+Image specifications:
+- Service images: 400x300px minimum
+- Blog images: 600x400px minimum
+- Format: JPG or PNG
+- Optimize for web use
+
+
