@@ -26,7 +26,7 @@
 /* Two Column Layout */
 .services-layout {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -43,7 +43,7 @@
 }
 
 .sidebar-content {
-  padding: 2rem;
+  padding: 1rem 20px;
 }
 
 .sidebar-title {
@@ -78,7 +78,7 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #8b7355;
 }
 
 .filter-options {
@@ -101,47 +101,98 @@
 }
 
 .filter-btn:hover {
-  border-color: #007bff;
-  color: #007bff;
+  border-color: #8b7355;
+  color: #8b7355;
   background: #f8f9ff;
 }
 
 .filter-btn.active {
-  background: #007bff;
+  background: #8b7355;
   color: white;
-  border-color: #007bff;
+  border-color: #8b7355;
 }
 
-/* Price Range Button */
-.price-range-btn {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid #e1e5e9;
+/* Price Range Slider */
+.price-range-container {
   background: white;
+  /* border: 2px solid #e1e5e9; */
   border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: left;
+  padding: 16px;
+  margin-bottom: 1rem;
+}
+
+.price-labels {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 12px;
 }
 
-.price-range-btn:hover {
-  border-color: #007bff;
-  color: #007bff;
-  background: #f8f9ff;
+.price-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8b7355;
+  /* background: #f8f9ff; */
+  padding: 4px 8px;
+  border-radius: 4px;
+  /* border: 1px solid #8b7355; */
 }
 
-.btn-arrow {
-  font-size: 12px;
-  transition: transform 0.3s ease;
+.price-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e1e5e9;
+  outline: none;
+  margin-bottom: 8px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.price-range-btn:hover .btn-arrow {
-  transform: translateY(1px);
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8b7355;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.price-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+}
+
+.price-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8b7355;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.price-slider::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+}
+
+.price-slider::-webkit-slider-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #e1e5e9;
+}
+
+.price-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #e1e5e9;
+  border: none;
 }
 
 .filter-actions {
@@ -234,62 +285,62 @@
   .services-page {
     padding: 1rem 0;
   }
-  
+
   .page-title {
     font-size: 2rem;
   }
-  
+
   /* Stack layout on mobile */
   .services-layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .sidebar {
     position: static;
     order: 2;
   }
-  
+
   .main-content {
     order: 1;
   }
-  
+
   .sidebar-content {
     padding: 1.5rem;
   }
-  
+
   .filter-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 0.5rem;
   }
-  
+
   .filter-btn {
     text-align: center;
     padding: 8px 12px;
     font-size: 13px;
   }
-  
+
   .filter-actions {
     flex-direction: row;
     gap: 0.5rem;
   }
-  
+
   .filter-actions .btn {
     flex: 1;
     padding: 10px 8px;
     font-size: 13px;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .services-cta {
     padding: 2rem 1rem;
   }
-  
+
   .cta-content h2 {
     font-size: 1.5rem;
   }
@@ -299,38 +350,37 @@
   .page-title {
     font-size: 1.8rem;
   }
-  
+
   .sidebar-content {
     padding: 1rem;
   }
-  
+
   .filter-options {
     grid-template-columns: 1fr;
   }
-  
+
   .filter-btn {
     padding: 8px 12px;
     font-size: 12px;
   }
-  
+
   .filter-actions {
     flex-direction: column;
   }
-  
+
   .filter-actions .btn {
     width: 100%;
   }
-  
+
   .no-results {
     padding: 2rem 1rem;
   }
-  
+
   .no-results-icon {
     font-size: 3rem;
   }
-  
+
   .services-cta {
     padding: 1.5rem 1rem;
   }
 }
-

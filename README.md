@@ -139,7 +139,7 @@ The application is fully responsive with breakpoints for:
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary**: #007bff (Blue)
+- **Primary**: #8b7355 (Blue)
 - **Secondary**: #6c757d (Gray)
 - **Success**: #28a745 (Green)
 - **Warning**: #ffc107 (Yellow)

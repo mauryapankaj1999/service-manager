@@ -66,7 +66,7 @@
 
 .blog-category-tag {
   background: #f8f9fa;
-  color: #007bff;
+  color: #8b7355;
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 0.8rem;
@@ -87,7 +87,7 @@
 }
 
 .blog-title-link:hover {
-  color: #007bff;
+  color: #8b7355;
 }
 
 .blog-excerpt {
@@ -114,7 +114,7 @@
 }
 
 .blog-read-more {
-  color: #007bff;
+  color: #8b7355;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;

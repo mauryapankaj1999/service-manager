@@ -1,58 +1,59 @@
-import React, { useState } from 'react';
-import './EnquiryModal.css';
+import React, { useState } from "react";
+import "./EnquiryModal.css";
 
 const EnquiryModal = ({ isOpen, onClose, service }) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    query: ''
+    name: "",
+    email: "",
+    phone: "",
+    query: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     setIsSubmitting(true);
-    
+
     try {
       // Simulate form submission delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       // Save enquiry data to localStorage
-      const enquiries = JSON.parse(localStorage.getItem('serviceEnquiries') || '[]');
+      const enquiries = JSON.parse(
+        localStorage.getItem("serviceEnquiries") || "[]"
+      );
       const enquiryData = {
         id: Date.now(),
         serviceId: service.id,
         serviceTitle: service.title,
         servicePrice: service.price,
         ...formData,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       };
-      
+
       enquiries.push(enquiryData);
-      localStorage.setItem('serviceEnquiries', JSON.stringify(enquiries));
-      
-      setSubmitStatus('success');
-      
+      localStorage.setItem("serviceEnquiries", JSON.stringify(enquiries));
+
+      setSubmitStatus("success");
+
       // Reset form after successful submission
       setTimeout(() => {
-        setFormData({ name: '', email: '', phone: '', query: '' });
+        setFormData({ name: "", email: "", phone: "", query: "" });
         setSubmitStatus(null);
         onClose();
       }, 2000);
-      
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -60,7 +61,7 @@ const EnquiryModal = ({ isOpen, onClose, service }) => {
 
   const handleClose = () => {
     if (!isSubmitting) {
-      setFormData({ name: '', email: '', phone: '', query: '' });
+      setFormData({ name: "", email: "", phone: "", query: "" });
       setSubmitStatus(null);
       onClose();
     }
@@ -73,38 +74,32 @@ const EnquiryModal = ({ isOpen, onClose, service }) => {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2 className="modal-title">Service Enquiry</h2>
-          <button 
-            className="modal-close" 
+          <button
+            className="modal-close"
             onClick={handleClose}
             disabled={isSubmitting}
           >
             ×
           </button>
         </div>
-        
+
         <div className="modal-body">
-          <div className="service-info">
-            <h3>{service.title}</h3>
-            <p className="service-price">{service.price}</p>
-            <p className="service-description">{service.description}</p>
-          </div>
-          
-          {submitStatus === 'success' && (
+          {submitStatus === "success" && (
             <div className="success-message">
               <div className="success-icon">✓</div>
               <h3>Enquiry Submitted Successfully!</h3>
               <p>Thank you for your interest. We'll get back to you soon.</p>
             </div>
           )}
-          
-          {submitStatus === 'error' && (
+
+          {submitStatus === "error" && (
             <div className="error-message">
               <div className="error-icon">✗</div>
               <h3>Submission Failed</h3>
               <p>Please try again or contact us directly.</p>
             </div>
           )}
-          
+
           {!submitStatus && (
             <form onSubmit={handleSubmit} className="enquiry-form">
               <div className="form-group">
@@ -122,7 +117,7 @@ const EnquiryModal = ({ isOpen, onClose, service }) => {
                   placeholder="Enter your full name"
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="email" className="form-label">
                   Email Address *
@@ -138,7 +133,7 @@ const EnquiryModal = ({ isOpen, onClose, service }) => {
                   placeholder="Enter your email address"
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="phone" className="form-label">
                   Phone Number *
@@ -154,7 +149,7 @@ const EnquiryModal = ({ isOpen, onClose, service }) => {
                   placeholder="Enter your phone number"
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="query" className="form-label">
                   Your Query *
@@ -170,22 +165,22 @@ const EnquiryModal = ({ isOpen, onClose, service }) => {
                   rows="4"
                 />
               </div>
-              
+
               <div className="form-actions">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="btn btn-outline"
                   onClick={handleClose}
                   disabled={isSubmitting}
                 >
                   Cancel
                 </button>
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-primary"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
+                  {isSubmitting ? "Submitting..." : "Submit "}
                 </button>
               </div>
             </form>
@@ -197,6 +192,3 @@ const EnquiryModal = ({ isOpen, onClose, service }) => {
 };
 
 export default EnquiryModal;
-
-
-

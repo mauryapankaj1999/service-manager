@@ -35,7 +35,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(0, 123, 255, 0.9);
+  background: #d27303;
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
@@ -69,14 +69,14 @@
 .service-price {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #007bff;
+  color: #8b7355;
   margin-bottom: 15px;
 }
 
 .service-btn {
   width: 100%;
   padding: 12px 20px;
-  background: #007bff;
+  background: #8b7355;
   color: white;
   border: none;
   border-radius: 8px;

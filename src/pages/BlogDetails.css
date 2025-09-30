@@ -11,7 +11,7 @@
 }
 
 .breadcrumb-link {
-  color: #007bff;
+  color: #8b7355;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -57,7 +57,7 @@
 
 .article-category {
   background: #f8f9fa;
-  color: #007bff;
+  color: #8b7355;
   padding: 4px 12px;
   border-radius: 20px;
   font-weight: 500;
@@ -119,7 +119,7 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-style: italic;
-  border-left: 4px solid #007bff;
+  border-left: 4px solid #8b7355;
   padding-left: 1rem;
 }
 
@@ -161,8 +161,8 @@
 }
 
 .action-btn:hover {
-  border-color: #007bff;
-  color: #007bff;
+  border-color: #8b7355;
+  color: #8b7355;
 }
 
 .action-icon {
@@ -231,7 +231,7 @@
 }
 
 .related-link:hover {
-  color: #007bff;
+  color: #8b7355;
 }
 
 .related-excerpt {
@@ -251,7 +251,7 @@
 
 .related-category {
   background: #f8f9fa;
-  color: #007bff;
+  color: #8b7355;
   padding: 2px 8px;
   border-radius: 12px;
   font-weight: 500;

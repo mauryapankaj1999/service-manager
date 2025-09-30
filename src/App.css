@@ -6,8 +6,8 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,7 +28,7 @@ body {
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 1366px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -45,7 +45,7 @@ body {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: #007bff;
+  background: #8b7355;
   color: white;
 }
 
@@ -66,13 +66,13 @@ body {
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #007bff;
-  color: #007bff;
+  border: 2px solid #8b7355;
+  color: #8b7355;
 }
 
 .btn-outline:hover {
-  background: #007bff;
-  color: white;
+  background: #8b7355;
+  color: white !important;
 }
 
 /* Cards */
@@ -115,7 +115,7 @@ body {
 .card-price {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #007bff;
+  color: #8b7355;
   margin-bottom: 15px;
 }
 
@@ -162,7 +162,7 @@ body {
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #8b7355;
 }
 
 .form-textarea {
@@ -206,9 +206,9 @@ body {
 
 .filter-btn.active,
 .filter-btn:hover {
-  background: #007bff;
+  background: #8b7355;
   color: white;
-  border-color: #007bff;
+  border-color: #8b7355;
 }
 
 /* Responsive Design */
@@ -216,21 +216,21 @@ body {
   .container {
     padding: 0 15px;
   }
-  
+
   .main-content {
     padding-top: 70px;
   }
-  
+
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
   }
-  
+
   .search-filter {
     padding: 20px;
   }
-  
+
   .filter-buttons {
     justify-content: center;
   }
@@ -241,13 +241,12 @@ body {
     padding: 10px 20px;
     font-size: 14px;
   }
-  
+
   .card-content {
     padding: 15px;
   }
-  
+
   .search-filter {
     padding: 15px;
   }
 }
-

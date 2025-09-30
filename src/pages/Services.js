@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import ServiceCard from '../components/ServiceCard';
-import PriceRangeModal from '../components/PriceRangeModal';
 import './Services.css';
 
 const Services = () => {
@@ -10,8 +9,7 @@ const Services = () => {
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [priceRange, setPriceRange] = useState('All');
-  const [showPriceRangeModal, setShowPriceRangeModal] = useState(false);
+  const [maxPrice, setMaxPrice] = useState(5000);
 
   const fetchServices = async () => {
     try {
@@ -48,24 +46,15 @@ const Services = () => {
     }
 
     // Price range filter
-    if (priceRange !== 'All') {
+    if (maxPrice < 5000) {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace('₹', '').replace(',', ''));
-        switch (priceRange) {
-          case 'Under ₹2000':
-            return price < 2000;
-          case '₹2000 - ₹3000':
-            return price >= 2000 && price <= 3000;
-          case 'Above ₹3000':
-            return price > 3000;
-          default:
-            return true;
-        }
+        return price <= maxPrice;
       });
     }
 
     setFilteredServices(filtered);
-  }, [services, searchTerm, selectedCategory, priceRange]);
+  }, [services, searchTerm, selectedCategory, maxPrice]);
 
   useEffect(() => {
     fetchServices();
@@ -88,22 +77,14 @@ const Services = () => {
     setSelectedCategory(category);
   };
 
-  const handlePriceRangeChange = (range) => {
-    setPriceRange(range);
+  const handleMaxPriceChange = (value) => {
+    setMaxPrice(parseInt(value));
   };
 
-  const handleOpenPriceRangeModal = () => {
-    setShowPriceRangeModal(true);
-  };
-
-  const handleClosePriceRangeModal = () => {
-    setShowPriceRangeModal(false);
-  };
-
-  const clearFilters = () => {
+  const clearFilters = () => {         
     setSearchTerm('');
     setSelectedCategory('All');
-    setPriceRange('All');
+    setMaxPrice(5000);
   };
 
 
@@ -186,13 +167,21 @@ const Services = () => {
               {/* Price Range Filter */}
               <div className="filter-section">
                 <h4 className="filter-title">Price Range</h4>
-                <button 
-                  className="price-range-btn"
-                  onClick={handleOpenPriceRangeModal}
-                >
-                  {priceRange === 'All' ? 'All Prices' : priceRange}
-                  <span className="btn-arrow">▼</span>
-                </button>
+                <div className="price-range-container">
+                  <div className="price-labels">
+                    <span className="price-value">₹0</span>
+                    <span className="price-value">₹{maxPrice}</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="5000"
+                    step="100"
+                    value={maxPrice}
+                    onChange={(e) => handleMaxPriceChange(e.target.value)}
+                    className="price-slider"
+                  />
+                </div>
               </div>
               
               {/* Filter Actions */}
@@ -225,26 +214,10 @@ const Services = () => {
             )}
 
             {/* Call to Action */}
-            <div className="services-cta">
-              <div className="cta-content">
-                <h2>Can't find what you're looking for?</h2>
-                <p>Contact us to discuss your specific needs and we'll create a custom solution for you.</p>
-                <a href="/contact" className="btn btn-primary">
-                  Contact Us
-                </a>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
-      
-      {/* Price Range Modal */}
-      <PriceRangeModal
-        isOpen={showPriceRangeModal}
-        onClose={handleClosePriceRangeModal}
-        onApply={handlePriceRangeChange}
-        currentRange={priceRange}
-      />
     </div>
   );
 };

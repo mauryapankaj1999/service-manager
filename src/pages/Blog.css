@@ -78,7 +78,7 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #8b7355;
 }
 
 .filter-options {
@@ -101,15 +101,15 @@
 }
 
 .filter-btn:hover {
-  border-color: #007bff;
-  color: #007bff;
+  border-color: #8b7355;
+  color: #8b7355;
   background: #f8f9ff;
 }
 
 .filter-btn.active {
-  background: #007bff;
+  background: #8b7355;
   color: white;
-  border-color: #007bff;
+  border-color: #8b7355;
 }
 
 .filter-actions {
